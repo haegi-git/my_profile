@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* styles.css */
+.icon-hover-orange {
+  @apply text-white group-hover:text-orange-500 transition-colors duration-300;
+}
+.icon-hover-blue {
+  @apply text-white group-hover:text-blue-500 transition-colors duration-300;
+}
+/* 필요한 색상만큼 클래스 추가 */
