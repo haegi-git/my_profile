@@ -1,29 +1,22 @@
-import { useState } from "react";
 import "./App.css";
-import StartPopup from "./components/StartPopup";
-import Profile from "./components/Profile";
+import Aboutme from "./components/Aboutme";
+import BackgroundCircles from "./components/BackgroundCircles";
+import Info from "./components/Info";
+import Portfolio from "./components/Portfolio";
+import PortfolioPopup from "./components/PortfolioPopup";
 import Skills from "./components/skills";
-import Portfolio from "./components/Protfolio/Portfolio";
 
+import movo from "./assets/movo.png";
 function App() {
-  const [closeGreetings, setCloseGreetings] = useState(true);
-  const [fadeGreetings, setFadeGreetings] = useState(false);
-
-  const handleGreetings = () => {
-    setFadeGreetings(true);
-    setTimeout(() => {
-      setCloseGreetings(false);
-    }, 1000);
-  };
   return (
-    <>
-      <div onClick={handleGreetings}>
-        <Profile />
-        <Skills />
-        <Portfolio />
-        {closeGreetings ? <StartPopup fadeGreetings={fadeGreetings} /> : null}
-      </div>
-    </>
+    <div className="relative h-[1000vh]">
+      <BackgroundCircles />
+      <Info />
+      <Aboutme />
+      <Skills />
+      <Portfolio />
+      {/* <PortfolioPopup img={movo} title={"운동인들의 커뮤니티 - Movo"} /> */}
+    </div>
   );
 }
 
