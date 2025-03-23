@@ -3,19 +3,30 @@ import Aboutme from "./components/Aboutme";
 import BackgroundCircles from "./components/BackgroundCircles";
 import Info from "./components/Info";
 import Portfolio from "./components/Portfolio";
-import PortfolioPopup from "./components/PortfolioPopup";
-import Skills from "./components/skills";
+import Skills from "./components/Skills";
 
-import movo from "./assets/movo.png";
 function App() {
   return (
-    <div className="relative h-[1000vh]">
+    <div className="relative lg:w-[80%] m-auto font-montserrat">
       <BackgroundCircles />
-      <Info />
-      <Aboutme />
-      <Skills />
+
+      {/* ✅ 데스크탑(lg 이상)에서는 그룹으로 묶음 */}
+      <div className="hidden lg:flex lg:gap-8">
+        <div className="lg:flex lg:flex-col w-1/2">
+          <Info />
+          <Skills />
+        </div>
+        <Aboutme />
+      </div>
+
+      {/* ✅ 모바일에서는 개별적으로 출력 */}
+      <div className="lg:hidden">
+        <Info />
+        <Aboutme />
+        <Skills />
+      </div>
+
       <Portfolio />
-      {/* <PortfolioPopup img={movo} title={"운동인들의 커뮤니티 - Movo"} /> */}
     </div>
   );
 }

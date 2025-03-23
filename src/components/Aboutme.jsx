@@ -1,9 +1,9 @@
 export default function Aboutme() {
   return (
-    <div className="pt-5 pl-4">
+    <div className="w-full lg:w-1/2 pt-5 pl-4">
       <h1 className="font-bold text-4xl">About Me</h1>
       <h2 className="mt-2 mb-2">👨‍💻 배해기 | FrontEnd Developer </h2>
-      <p className="text-sm leading-7">
+      <p className="text-sm lg:text-lg leading-10">
         React를 중심으로 개발하며,
         <br />
         최근에는 Next.js로 풀스택 프로젝트를 진행하고 있습니다.
